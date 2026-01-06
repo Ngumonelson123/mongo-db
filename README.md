@@ -35,6 +35,7 @@ jammy is used for Ubuntu 22.04 and above.
 
 Step 5: Update package list
 sudo apt update
+
 Step 6: Install MongoDB
 
 sudo apt install -y mongodb-org
@@ -46,6 +47,8 @@ sudo systemctl enable mongod
 
 Step 8: Verify MongoDB status
 sudo systemctl status mongod
+
+
 Step 9: Connect to MongoDB Shell
 mongosh
 🗄️ Database Details
