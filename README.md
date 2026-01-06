@@ -18,14 +18,15 @@ The goal is to create a database, manipulate documents, and perform queries base
 
 ### Step 1: Update system packages
 sudo apt update
-Step 2: Install required dependencies
+
+### Step 2: Install required dependencies
 sudo apt install -y gnupg curl
 
-Step 3: Import MongoDB GPG key
+### Step 3: Import MongoDB GPG key
 curl -fsSL https://pgp.mongodb.com/server-7.0.asc | \
 sudo gpg -o /usr/share/keyrings/mongodb-server-7.0.gpg --dearmor
 
-Step 4: Add MongoDB repository
+### Step 4: Add MongoDB repository
 echo "deb [ arch=amd64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg ] \
 https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/7.0 multiverse" | \
 sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
@@ -33,23 +34,23 @@ sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
 
 jammy is used for Ubuntu 22.04 and above.
 
-Step 5: Update package list
+### Step 5: Update package list
 sudo apt update
 
-Step 6: Install MongoDB
+### Step 6: Install MongoDB
 
 sudo apt install -y mongodb-org
 
-Step 7: Start and enable MongoDB service
+### Step 7: Start and enable MongoDB service
 
 sudo systemctl start mongod
 sudo systemctl enable mongod
 
-Step 8: Verify MongoDB status
+### Step 8: Verify MongoDB status
 sudo systemctl status mongod
 
 
-Step 9: Connect to MongoDB Shell
+### Step 9: Connect to MongoDB Shell
 mongosh
 🗄️ Database Details
 Database Name: contact
